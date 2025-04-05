@@ -21,7 +21,7 @@ namespace Domain.Entities
         public Productbrand productbrand { get; set; }
         #endregion
         #region ProductType
-        public int TypeId { get; set; }
+        public int TypeId { get; set; } 
         public ProductType productType { get; set; }
 
         #endregion
