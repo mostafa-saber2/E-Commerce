@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Domain.Entities;
+﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace Persistence.Data
+namespace Domain.Repositories
 {
     public class StoreContext : DbContext // لا تستخدم static هنا
     {

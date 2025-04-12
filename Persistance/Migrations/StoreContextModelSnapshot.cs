@@ -9,7 +9,7 @@ using Persistance.Data;
 
 namespace Persistance.Migrations
 {
-    [DbContext(typeof(StoreContext))]
+    [DbContext(typeof(Data.AppContext))]
     partial class StoreContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -40,7 +40,7 @@ namespace Persistance.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PictureURL")
+                    b.Property<string>("PictureUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

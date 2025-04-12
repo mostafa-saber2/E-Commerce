@@ -11,8 +11,8 @@ using Persistance.Data;
 namespace Persistance.Migrations
 {
     [DbContext(typeof(Data.AppContext))]
-    [Migration("20250409193656_Create")]
-    partial class Create
+    [Migration("20250410072912_ChangeDesc")]
+    partial class ChangeDesc
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,7 +43,7 @@ namespace Persistance.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PictureURL")
+                    b.Property<string>("PictureUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
