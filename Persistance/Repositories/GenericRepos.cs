@@ -13,9 +13,9 @@ namespace Domain.Repositories
 {
     public class GenericRepos<TEntity, Tkey> : IGenericRepos<TEntity, Tkey> where TEntity : BaseEntity<Tkey>
     {
-        private readonly Persistance.Data.AppContext _storeContext;
+        private readonly StoreContext _storeContext;
 
-        public GenericRepos(Persistance.Data.AppContext storeContext)
+        public GenericRepos(StoreContext storeContext)
         {
            _storeContext = storeContext;
         }
@@ -36,6 +36,11 @@ namespace Domain.Repositories
 
         public void UpdateAsync(TEntity entity)
        => _storeContext.Set<TEntity>().AddAsync(entity);
+
+        Task IGenericRepos<TEntity, Tkey>.UpdateAsync(TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 
   

@@ -5,6 +5,7 @@ using Domain.Contracts;
 using Domain.Entities;
 using Persistance.Data;
 using Microsoft.EntityFrameworkCore;
+using Domain.Repositories;
 
 namespace Persistance
 {

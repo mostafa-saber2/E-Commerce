@@ -13,9 +13,9 @@ namespace Persistance.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly Data.AppContext _storeContext;
+        private readonly StoreContext _storeContext;
         private readonly ConcurrentDictionary<string, object> _Repositories;
-        public UnitOfWork(Data.AppContext storeContext)
+        public UnitOfWork(StoreContext storeContext)
         {
             _storeContext = storeContext;
             _Repositories = new();
