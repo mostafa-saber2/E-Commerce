@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Shared
 {
-    public class Product:BaseEntity<int>
+ public record ProductResultDTO
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string PictureUrl { get; set; }
@@ -17,12 +18,10 @@ namespace Domain.Entities
 
 
         #region ProductBrand
-        public int BrandId { get; set; }
-        public Productbrand productbrand { get; set; }
+  public string BrandName { get; set; }
         #endregion
         #region ProductType
-        public int TypeId { get; set; } 
-        public ProductType productType { get; set; }
+   public string TypeName { get; set; }
 
         #endregion
     }
